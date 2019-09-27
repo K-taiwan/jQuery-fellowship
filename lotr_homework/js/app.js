@@ -61,8 +61,19 @@ const makeMiddleEarth = (arr) => {
          $('#middle-earth').append('<article></article>');
       }
       for(let k = 0; k < arr.length; k++){
-          $('article').attr('id',lands[i]);
+          $('article').eq(k).attr('id',lands[k]);
       }
+      $('article').prepend('<h1></h1>');
+
+      for(let j = 0; j < arr.length; j++){
+        $('h1').eq(j).text(arr[j]);
+
+      }
+      // $('h1').eq(0).text("The-Shire");
+      // $('h1').eq(1).text("Rivendell");
+      // $('h1').eq(2).text("Mordor");
+
+
 };
 makeMiddleEarth(lands);
 
