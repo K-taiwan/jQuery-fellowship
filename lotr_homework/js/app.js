@@ -63,7 +63,7 @@ const makeMiddleEarth = (arr) => {
       for(let k = 0; k < arr.length; k++){
           $('article').eq(k).attr('id',lands[k]);
       }
-      $('article').prepend('<h1></h1>');
+      $('article').append('<h1></h1>');
 
       for(let j = 0; j < arr.length; j++){
         $('h1').eq(j).text(arr[j]);
@@ -83,19 +83,29 @@ makeMiddleEarth(lands);
 // ============
 // Chapter 2
 // ============
+
+$('#The-Shire').append(`<ul class="hobbitList"></ul>`);
 const makeHobbits = () => {
 
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+  // $('.hobbitsList').eq(0).attr('ul', hobbits);
+  for(let i = 0; i < hobbits.length; i++){
+    $('.hobbitList').append(`<li class="hobbit">${hobbits[i]}</li>`);
+  }
   // 2. give each hobbit a class of "hobbit"
 
+    // for(let i = 0; i < hobbits.length; i++){
+    //   $('.hobbitsList').eq(i).attr('ul', hobbits);
+    // }
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
 
 };
+
+makeHobbits(hobbits);
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
