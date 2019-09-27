@@ -84,11 +84,11 @@ makeMiddleEarth(lands);
 // Chapter 2
 // ============
 
-$('#The-Shire').append(`<ul class="hobbitList"></ul>`);
+
 const makeHobbits = () => {
 
   console.log('Make hobbits');
-
+  $('#The-Shire').append(`<ul class="hobbitList"></ul>`);
   // 1. display an unordered list of the hobbits in the shire.
   // $('.hobbitsList').eq(0).attr('ul', hobbits);
   for(let i = 0; i < hobbits.length; i++){
@@ -116,6 +116,8 @@ makeHobbits(hobbits);
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+    $('.hobbit').eq(0).append('<div id="the-ring"></div>');
+    
 
   // 2. add the ring as a child of Frodo
 
@@ -124,6 +126,7 @@ const keepItSecretKeepItSafe = () => {
   // when you think you have given Frodo the ring, check in your Elements tab
 
 };
+keepItSecretKeepItSafe();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
