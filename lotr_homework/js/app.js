@@ -63,7 +63,7 @@ const makeMiddleEarth = (arr) => {
       for(let k = 0; k < arr.length; k++){
           $('article').eq(k).attr('id',lands[k]);
       }
-      $('article').append('<h1></h1>');
+      $('article').append('<h1 class="homie"></h1>');
 
       for(let j = 0; j < arr.length; j++){
         $('h1').eq(j).text(arr[j]);
@@ -117,7 +117,7 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
     $('.hobbit').eq(0).append('<div id="the-ring"></div>');
-    
+
 
   // 2. add the ring as a child of Frodo
 
@@ -137,11 +137,17 @@ keepItSecretKeepItSafe();
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+    // for(let i = 0; i < baddies.length; i++){}
+    $('#Mordor').append(`<ul class="baddies"></ul>`);
+    
   // 2. give each of the baddies a class of "baddy"
-
+    for(let i = 0; i < baddies.length; i++){
+    $('.baddies').append(`<li class="baddy">${baddies[i]}</li>`);
+    }
   // 3. remember to append them to Mordor
+    
 };
+makeBaddies();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
