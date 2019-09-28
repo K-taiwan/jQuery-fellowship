@@ -84,6 +84,11 @@ article:nth-child(1) {
   left: 21%;
 }
 
+.the-white {
+  background: #fff;
+  border: 1px solid grey;
+}
+
 /* Rivendell */
 article:nth-child(2) {
   left: 47%;
