@@ -234,7 +234,7 @@ const theBalrog = () => {
       $('.buddy').eq(0).attr('class', 'the-white');
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-      
+
 
 };
 theBalrog();
@@ -245,15 +245,17 @@ theBalrog();
 // ============
 // Chapter 10
 // ============
-const hornOfGondor = () => {
+const hornOfGondor = () => { 
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+      alert('Horn of Gondor has been Blown!');
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
-
+      $('.buddy').eq(3).attr('class','boromir');
+        //used CSS .boromir to put line-through
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+      $('.baddy').eq(2).remove();
 };
+hornOfGondor();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"

@@ -123,6 +123,10 @@ article:nth-child(3) h1:hover {
   vertical-align: top;
 }
 
+.boromir {
+  text-decoration: line-through;
+}
+
 h1 {
   font-size: 2.5em;
   margin: 0 0 0 0;
