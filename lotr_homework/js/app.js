@@ -160,11 +160,12 @@ const makeBuddies = (buddies) => {
   // 1. create an aside tag and append it to middle-earth below mordor
       $('#middle-earth').append(`<aside class="aside"></aside>`);
   // 2. display an unordered list of buddies in the aside
-      for(let i = 0; i < buddies.length; i++){
-      $('.aside').append(`<ul class="buddy">${buddies[i]}</ul>`);
-      }
+      $('.aside').append(`<ul class="buddyList"></ul>`);
+      
   // 3. give each of the buddies a class of "buddy"
-
+      for(let i = 0; i < buddies.length; i++){
+        $('.buddyList').append(`<li class="buddy">${buddies[i]}</li>`);
+      }
 };
 makeBuddies(buddies);
 
@@ -191,10 +192,12 @@ leaveTheShire();
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+        
+        $('.buddy').eq(3).text('Aragorn');
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
+beautifulStranger();
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
