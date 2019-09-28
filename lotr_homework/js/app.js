@@ -134,7 +134,7 @@ keepItSecretKeepItSafe();
 // ============
 // Chapter 4
 // ============
-const makeBaddies = () => {
+const makeBaddies = (baddies) => {
 
   // 1. display an unordered list of baddies in Mordor
     // for(let i = 0; i < baddies.length; i++){}
@@ -147,7 +147,7 @@ const makeBaddies = () => {
   // 3. remember to append them to Mordor
     
 };
-makeBaddies();
+makeBaddies(baddies);
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
@@ -155,15 +155,18 @@ makeBaddies();
 // ============
 // Chapter 5
 // ============
-const makeBuddies = () => {
+const makeBuddies = (buddies) => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
-
+      $('#middle-earth').append(`<aside class="aside"></aside>`);
   // 2. display an unordered list of buddies in the aside
-
+      for(let i = 0; i < buddies.length; i++){
+      $('.aside').append(`<ul class="buddy">${buddies[i]}</ul>`);
+      }
   // 3. give each of the buddies a class of "buddy"
 
 };
+makeBuddies(buddies);
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
